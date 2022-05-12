@@ -1,6 +1,6 @@
-Template for the Read the Docs tutorial
-=======================================
+Document of a developing project on differantiable density functinal theory.
 
+=======================================
 This GitHub template includes fictional Python library
 with some basic Sphinx docs.
 

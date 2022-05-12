@@ -1,7 +1,8 @@
-API
+Molecule objects
+
 ===
 
 .. autosummary::
    :toctree: generated
 
-   lumache
+   Molecule object
