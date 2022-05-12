@@ -2,7 +2,7 @@ Document of a developing project on differantiable density functinal theory.
 
 ===================================
 
-This is a `JAX <https://github.com/google/jax>` library for differantiable density functional theory and quantum chemistry.
+This is a `JAX <https://github.com/google/jax/>`_ library for differantiable density functional theory and quantum chemistry.
 
 
 
@@ -23,7 +23,7 @@ Contents
 --------
 
 .. toctree::
-
    PySCF
    Molecule
-   
+   usage
+
