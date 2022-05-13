@@ -1,0 +1,9 @@
+Gradient Descent
+================
+
+
+Background
+----------
+
+
+

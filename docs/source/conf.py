@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'Differantiable DFT'
+project = 'JDFT'
 copyright = '2022, SEA AI LAB'
 author = 'Tianbo Li'
 
@@ -17,6 +17,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
+    'sphinx.ext.mathjax',
 ]
 
 intersphinx_mapping = {
@@ -29,7 +30,15 @@ templates_path = ['_templates']
 
 # -- Options for HTML output
 
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'sphinx_book_theme'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+
+# -- customize theme color
+
+html_theme_options = {
+    # 'style_nav_header_background': '#910f0f',
+    'show_toc_level': 2,
+}
+

@@ -1,0 +1,13 @@
+Molecule
+========
+
+``cdft.molecule`` is the core object for the computation.
+
+.. py:function:: init(config, spin, )
+
+  -config: the configuration of the molecule. spin the number of
+
+
+.. py:attribute:: config
+
+  the configuration of molecule

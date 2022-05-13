@@ -1,0 +1,12 @@
+Basic sets
+========================
+
+Pople's split valence type
+--------------------------
+
+
+
+
+
+.. math::
+  \phi(x) = c x^i y^j z^k \exp(-\zeta (x^2+y^2+z^2))

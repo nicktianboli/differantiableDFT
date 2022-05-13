@@ -1,0 +1,27 @@
+Usage
+=====
+
+.. _installation:
+
+Installation
+------------
+
+To use Lumache, first install it using pip:
+
+.. code-block:: console
+
+   $ pip install cdft
+
+
+Creating recipes
+----------------
+
+
+
+For example:
+
+>>> import numpy as np
+>>> np.arange(3)
+
+
+

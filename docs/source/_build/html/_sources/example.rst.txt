@@ -1,0 +1,29 @@
+Examples
+========
+
+.. _installation:
+
+Installation
+------------
+
+To use cdft, first install it using pip:
+
+.. code-block:: console
+
+   $ pip install cdft
+
+
+
+
+
+
+Generating a molecule object
+----------------------------
+
+For example:
+
+>>> import cdft
+>>> np.arange(3)
+
+
+
