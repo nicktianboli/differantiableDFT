@@ -22,7 +22,7 @@ This is a `JAX <https://github.com/google/jax/>`_-based package for differantiab
 Installation
 ------------
 
-To use cdft, first install it using pip:
+To use :guilabel:`JDFT`, first install it using pip:
 
 .. code-block:: console
 

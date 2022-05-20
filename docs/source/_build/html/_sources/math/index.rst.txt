@@ -10,5 +10,6 @@ Contents
 .. toctree::
   :maxdepth: 2
 
-  fundamental
+  basis_set
+  kohn-sham
   gd

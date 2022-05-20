@@ -31,10 +31,11 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="JDFT API" href="../jdft/index.html" />
-    <link rel="prev" title="Basic sets" href="fundamental.html" />
+    <link rel="prev" title="Kohn-sham method" href="kohn-sham.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -93,8 +94,13 @@
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="fundamental.html">
+    <a class="reference internal" href="basis_set.html">
      Basic sets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="kohn-sham.html">
+     Kohn-sham method
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -152,7 +158,7 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../pyscf/molecule.html">
+    <a class="reference internal" href="../pyscf/gto.html">
      Molecule
     </a>
    </li>
@@ -322,6 +328,11 @@ title="Print to PDF"
    Background
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-objective-for-kohn-sham-equation-with-gradient-descent">
+   The objective for Kohn-sham equation with gradient descent
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -346,6 +357,11 @@ title="Print to PDF"
    Background
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-objective-for-kohn-sham-equation-with-gradient-descent">
+   The objective for Kohn-sham equation with gradient descent
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -361,6 +377,15 @@ title="Print to PDF"
 <section id="background">
 <h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">#</a></h2>
 </section>
+<section id="the-objective-for-kohn-sham-equation-with-gradient-descent">
+<h2>The objective for Kohn-sham equation with gradient descent<a class="headerlink" href="#the-objective-for-kohn-sham-equation-with-gradient-descent" title="Permalink to this headline">#</a></h2>
+<p>The Kohn-Sham Equation eventually converge until</p>
+<div class="math notranslate nohighlight">
+\[\left[  -\dfrac{1}{2}\nabla ^2 + V^\sigma_{ext}(\boldsymbol{r}) + \int d^3 \boldsymbol{r}' \dfrac{n^\sigma(\boldsymbol{r}')}{\vert \boldsymbol{r} - \boldsymbol{r}'\vert}  + v^\sigma_{xc}(\boldsymbol{r}) \right] \psi_i^\sigma (\boldsymbol{r}) =  \varepsilon_i \psi^\sigma_i(\boldsymbol{r} )\]</div>
+<p>instead of fixing <span class="math notranslate nohighlight">\(n(\boldsymbol{r}')\)</span>, we substitute <span class="math notranslate nohighlight">\(n^\sigma(\boldsymbol{r}')=\sum \vert \psi^\sigma_i(\boldsymbol{r}') \vert^2\)</span> and we have</p>
+<div class="math notranslate nohighlight">
+\[\epsilon_i = \min_{\psi^\sigma_i} \left&lt;\psi^\sigma_i \left\vert -\dfrac{1}{2}\nabla ^2 + v^\sigma_{ext}(\boldsymbol{r}) + \int d^3 \boldsymbol{r}' \dfrac{\sum \vert \psi^\sigma_i(\boldsymbol{r}') \vert^2}{\vert \boldsymbol{r} - \boldsymbol{r}'\vert}  + v^\sigma_{xc}(\boldsymbol{r}) \right\vert \psi^\sigma_i \right&gt;\]</div>
+</section>
 </section>
 
 
@@ -371,11 +396,11 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="fundamental.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="kohn-sham.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Basic sets</p>
+            <p class="prev-next-title">Kohn-sham method</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../jdft/index.html" title="next page">

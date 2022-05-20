@@ -10,6 +10,6 @@ Contents
 .. toctree::
    :maxdepth: 2
 
-   molecule
+   gto
    gen_grid
    scf

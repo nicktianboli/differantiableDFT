@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Math &#8212; JDFT 0.0 documentation</title>
+    <title>Basic sets &#8212; JDFT 0.0 documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -31,10 +31,11 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Basic sets" href="basis_set.html" />
-    <link rel="prev" title="JDFT: A differantiable Jax implementation for density functional theory" href="../index.html" />
+    <link rel="next" title="Kohn-sham method" href="kohn-sham.html" />
+    <link rel="prev" title="Math" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -83,7 +84,7 @@
     <div class="bd-toc-item active">
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="index.html">
    Math
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -91,9 +92,9 @@
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="basis_set.html">
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Basic sets
     </a>
    </li>
@@ -263,7 +264,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/math/index.rst.txt"
+        <a href="../_sources/math/basis_set.rst.txt"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -323,8 +324,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#contents">
-   Contents
+  <a class="reference internal nav-link" href="#pople-s-split-valence-type">
+   Pople’s split valence type
   </a>
  </li>
 </ul>
@@ -336,7 +337,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Math</h1>
+                <h1>Basic sets</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -347,8 +348,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#contents">
-   Contents
+  <a class="reference internal nav-link" href="#pople-s-split-valence-type">
+   Pople’s split valence type
   </a>
  </li>
 </ul>
@@ -361,24 +362,19 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="math">
-<h1>Math<a class="headerlink" href="#math" title="Permalink to this headline">#</a></h1>
-<section id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">#</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="basis_set.html">Basic sets</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="basis_set.html#pople-s-split-valence-type">Pople’s split valence type</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="kohn-sham.html">Kohn-sham method</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gd.html">Gradient Descent</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="gd.html#background">Background</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gd.html#the-objective-for-kohn-sham-equation-with-gradient-descent">The objective for Kohn-sham equation with gradient descent</a></li>
-</ul>
-</li>
-</ul>
-</div>
+  <section id="basic-sets">
+<h1>Basic sets<a class="headerlink" href="#basic-sets" title="Permalink to this headline">#</a></h1>
+<section id="pople-s-split-valence-type">
+<h2>Pople’s split valence type<a class="headerlink" href="#pople-s-split-valence-type" title="Permalink to this headline">#</a></h2>
+<p>The single electron wave function $phi_i$’s are usually approximated by a series of set functions:</p>
+<div class="math notranslate nohighlight">
+\[\psi_i(\boldsymbol{r}) = \sum_\alpha C_{\alpha, i} g_\alpha(\boldsymbol{r})\]</div>
+<p>where <span class="math notranslate nohighlight">\(C_{\alpha, i}\)</span> is the coefficient of the <span class="math notranslate nohighlight">\(\alpha\)</span>-th basis function for the <span class="math notranslate nohighlight">\(i\)</span>-th molecular orbital. One of the most commonly-used basis function is the Gaussian-type orbitals (GTO). A Gaussian basis centered at <span class="math notranslate nohighlight">\(\boldsymbol{r}'= (x', y', z')^\top\)</span> of order <span class="math notranslate nohighlight">\(l, m, n\)</span> is defined by,</p>
+<div class="math notranslate nohighlight">
+\[g_{l, m, n}(\boldsymbol{r}; \zeta, \boldsymbol{r}') = c(x-\boldsymbol{r}'_x)^l(y-\boldsymbol{r}'_y)^m(z-\boldsymbol{r}'_z)^n e^{-\zeta\Vert \boldsymbol{r}-\boldsymbol{r}'\Vert^2}\]</div>
+<p>with normalization constant:</p>
+<div class="math notranslate nohighlight">
+\[c = \left(  \dfrac{2\zeta}{\pi} \right)^{\frac34} \left( \dfrac{(8\zeta)^{l+m+n} l!m!n! }{(2l)!(2m)!(2n)!}\right)^{\frac12}.\]</div>
 </section>
 </section>
 
@@ -390,17 +386,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../index.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">JDFT: A differantiable Jax implementation for density functional theory</p>
+            <p class="prev-next-title">Math</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="basis_set.html" title="next page">
+    <a class='right-next' id="next-link" href="kohn-sham.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Basic sets</p>
+        <p class="prev-next-title">Kohn-sham method</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
